@@ -1,7 +1,7 @@
 import './search-block.scss';
 
 
-import {useEffect, useMemo, useState} from 'react';
+import {useEffect, useMemo, useRef} from 'react';
 import {SimpleSelector} from '../SimpleSelector';
 import classNames from 'classnames';
 import {SearchBlockButtons} from './SearchBlockButtons';
@@ -129,7 +129,6 @@ export function SearchBlock({
 
     let Spinner = theme === "dark" ? SpinnerDarkIcon : SpinnerIcon;
 
-
     return (
         <div className="SearchBlock-wrapper">
             <div className={classNames("SearchBlock-search application-block", {error: queryError})}>
@@ -159,7 +158,10 @@ export function SearchBlock({
 }
 
 function SearchInput({ query, setQuery }) {
+    const searchInputRef = useAutofocus();
+
     return <input type="text" placeholder="Пошук..." value={query}
+                  ref={searchInputRef}
                   onInput={e => setQuery(e.target.value)}/>
 }
 
@@ -174,5 +176,14 @@ function isRegexValid(regex) {
 
 function ctrlCls() {
     return "ctrl";
+}
+
+function useAutofocus() {
+    const ref = useRef();
+    useEffect(() => {
+        ref.current.focus();
+    }, [ref]);
+
+    return ref;
 }
 

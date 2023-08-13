@@ -12,6 +12,7 @@ import {logManager} from '../../logging/logManager';
 import classNames from 'classnames';
 import {ResultsPlaceholder} from './Placeholder';
 import clipboardCopy from 'clipboard-copy';
+import {useSearchRequested} from './useSearchRequested';
 
 const log = logManager.getLogger("ResultsList");
 
@@ -51,6 +52,8 @@ export function ResultsList({worker, entries, setActiveEntryIdx, activeEntryIdx,
         }
     }, [compareMode, list]);
 
+    const searchRequested = useSearchRequested(worker);
+
     return <div className={classNames("application-block ResultsList panel-top", { hidden: compareMode })}>
         <AutoSizer>
             {({width, height}) =>
@@ -73,7 +76,7 @@ export function ResultsList({worker, entries, setActiveEntryIdx, activeEntryIdx,
                 tooltipText={"Копіювати посилання на результати пошуку"} />
         </div>
         <LoadingOverlay isLoading={isLoading} />
-        <ResultsPlaceholder isVisible={!isLoading && !(entries?.length)} />
+        <ResultsPlaceholder isVisible={!isLoading && !entries.length} searchRequested={searchRequested} />
     </div>
 }
 

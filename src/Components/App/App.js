@@ -14,9 +14,6 @@ import {Tooltip} from 'react-tooltip';
 import {useColorTheming} from './useColorTheming';
 import {useWorkerSubscription} from '../worker/useWorkerSubscription';
 
-let worker = {};
-let meta = { languages: [] };
-let setWorkerData = ({ worker: w, meta: m} ) => { meta = m; worker = w; };
 
 function App() {
     useCorrectViewport();
@@ -26,7 +23,7 @@ function App() {
     const { theme, toggleTheme } = useColorTheming();
 
     let [state, setState] = useState('Initial');
-    // let [{worker, meta}, setWorkerData] = useState({meta: {languages: []}, worker: {}});
+    let [{worker, meta}, setWorkerData] = useState({meta: {languages: []}, worker: {}});
     let {isLoading} = useWorkerWrapper({setProgress: setState, onInited: setWorkerData});
 
     let disabledCompareMode = useMemo(() => () => setCompareMode(false), []);

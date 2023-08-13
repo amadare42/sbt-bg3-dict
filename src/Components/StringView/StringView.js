@@ -12,6 +12,7 @@ import {stdTooltip} from '../../common/stdTooltip';
 import {CompareIcon, SwitchIcon, TextIcon, XmlIcon} from '../../common/icons';
 import classNames from 'classnames';
 import clipboardCopy from 'clipboard-copy';
+import {useWorkerSubscription} from '../worker/useWorkerSubscription';
 
 export function StringView({
                                selectedEntry,
@@ -82,6 +83,12 @@ export function StringView({
         }
     }, [selectedEntry?.ContentId, targetLang, currentLang]);
 
+    let resetSearch = useMemo(() => () => {
+        setEntries([]);
+        setActiveEntry(null);
+    }, []);
+    useWorkerSubscription(worker, "resetSearch", resetSearch);
+
 
     return <div
         className={classNames("application-block StringView", {"panel-bottom": !isTopPanel, "panel-top": isTopPanel})}>
@@ -97,7 +104,7 @@ export function StringView({
                           targetLang={targetLang}/>
             <button onClick={toggleFormatting}
                     data-tooltip-id="tooltip" data-tooltip-content="Форматувати"
-                    className={"btn-base switch-langs-button" + (isFormatting ? " enabled" : "")}>
+                    className={"btn-base switch-langs-button first" + (isFormatting ? " enabled" : "")}>
                 <TextIcon width={24} height={24}/>
             </button>
             <button {...stdTooltip("Згортати теґи")} onClick={toggleCollapsibleOverride}
@@ -114,7 +121,7 @@ export function StringView({
         </div>
         <p className={"StringView-text" + (isLoading ? " loading" : "")}>
             {activeEntry ? formatEntry(activeEntry.Text, collapsibleTagFactory, isFormatting) :
-                <i>(нема запису)</i>}
+                <div className={"noentry-placeholder"}><span>(нема запису)</span></div>}
         </p>
 
         {

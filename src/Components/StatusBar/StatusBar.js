@@ -16,12 +16,17 @@ export function StatusBar({state, meta, toggleTheme}) {
 
     return <div className="StatusBar StatusBar-wrapper">
         <div className="application-block StatusBar-status">
-            <p>Стан: <b>{mapStateName(state, meta)}</b></p>
-            {dateString ? <p>Дані від: <b>{dateString}</b></p> : <p><AnimatedEllipsis/></p>}
+            <div className={"StatusBar-status-block"}>
+                <p>Стан: <b>{mapStateName(state, meta)}</b></p>
+            </div>
+            <div className={"StatusBar-status-block"}>
+                {dateString ? <p>Дані від: <b>{dateString}</b></p> : <p><AnimatedEllipsis/></p>}
+            </div>
         </div>
         <div className="application-block StatusBar-theme">
-            <button className={"btn-base btn-theme"} onClick={toggleTheme} {...stdTooltip("Переключити кольорову схему")}>
-                <ThemeIcon width={24} height={24} />
+            <button className={"btn-base btn-theme"}
+                    onClick={toggleTheme} {...stdTooltip("Переключити кольорову схему")}>
+                <ThemeIcon width={24} height={24}/>
             </button>
         </div>
     </div>
@@ -40,7 +45,7 @@ let stateNames = {
 }
 
 function mapStateName(stateName, meta) {
-    if (stateName === "Error" && meta?.languages?.length ) {
+    if (stateName === "Error" && meta?.languages?.length) {
         return "Помилка. Дані можуть бути застарілими."
     }
     return stateNames[stateName] || stateName;

@@ -32,6 +32,13 @@ function ObjectSelector({values, targetValue, setTargetValue, cls, placeholder, 
             setTargetValue(activeEntry.value);
         }
     }, [activeEntry, setTargetValue]);
+
+    useEffect(() => {
+        if (values.length === 0) {
+            setActiveEntry(null);
+        }
+    }, [values]);
+
     return <Select noOptionsMessage={Empty}
                    styles={commonSelectStyles}
                    placeholder={placeholder} className={cls} options={options}

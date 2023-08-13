@@ -7,3 +7,4 @@ export {ReactComponent as TextIcon} from '../resources/text.svg';
 export {ReactComponent as XmlIcon} from '../resources/xml-icon.svg';
 export {ReactComponent as ThemeIcon} from '../resources/theme.svg';
 export {ReactComponent as CompareIcon} from '../resources/compare.svg';
+export {ReactComponent as NoResultIcon} from '../resources/no-result.svg';
