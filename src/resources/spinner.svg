@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="16px" height="16px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+  <g>
+    <rect x="80" y="40" rx="10" ry="10" width="20" height="20" transform-origin="85 45" fill="#00b5e9">
+      <animate attributeName="fill" values="#00b5e9;#ffffff" keyTimes="0;1" dur="1s" begin="-1s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="scale" additive="sum" from="1 1" to="0.65 0.65" begin="-1" dur="1s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  <g>
+    <rect x="68.2842712474619" y="68.2842712474619" rx="10" ry="10" width="20" height="20" transform-origin="73.2842712474619 73.2842712474619" fill="#00b5e9">
+      <animate attributeName="fill" values="#00b5e9;#ffffff" keyTimes="0;1" dur="1s" begin="-0.875s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="scale" additive="sum" from="1 1" to="0.65 0.65" begin="-0.875" dur="1s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  <g>
+    <rect x="40" y="80" rx="10" ry="10" width="20" height="20" transform-origin="45 85" fill="#00b5e9">
+      <animate attributeName="fill" values="#00b5e9;#ffffff" keyTimes="0;1" dur="1s" begin="-0.75s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="scale" additive="sum" from="1 1" to="0.65 0.65" begin="-0.75" dur="1s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  <g>
+    <rect x="11.7157287525381" y="68.2842712474619" rx="10" ry="10" width="20" height="20" transform-origin="16.7157287525381 73.2842712474619" fill="#00b5e9">
+      <animate attributeName="fill" values="#00b5e9;#ffffff" keyTimes="0;1" dur="1s" begin="-0.625s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="scale" additive="sum" from="1 1" to="0.65 0.65" begin="-0.625" dur="1s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  <g>
+    <rect x="0" y="40" rx="10" ry="10" width="20" height="20" transform-origin="5 45" fill="#00b5e9">
+      <animate attributeName="fill" values="#00b5e9;#ffffff" keyTimes="0;1" dur="1s" begin="-0.5s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="scale" additive="sum" from="1 1" to="0.65 0.65" begin="-0.5" dur="1s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  <g>
+    <rect x="11.7157287525381" y="11.7157287525381" rx="10" ry="10" width="20" height="20" transform-origin="16.7157287525381 16.7157287525381" fill="#00b5e9">
+      <animate attributeName="fill" values="#00b5e9;#ffffff" keyTimes="0;1" dur="1s" begin="-0.375s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="scale" additive="sum" from="1 1" to="0.65 0.65" begin="-0.375" dur="1s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  <g>
+    <rect x="40" y="0" rx="10" ry="10" width="20" height="20" transform-origin="45 5" fill="#00b5e9">
+      <animate attributeName="fill" values="#00b5e9;#ffffff" keyTimes="0;1" dur="1s" begin="-0.25s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="scale" additive="sum" from="1 1" to="0.65 0.65" begin="-0.25" dur="1s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  <g>
+    <rect x="68.2842712474619" y="11.7157287525381" rx="10" ry="10" width="20" height="20" transform-origin="73.2842712474619 16.7157287525381" fill="#00b5e9">
+      <animate attributeName="fill" values="#00b5e9;#ffffff" keyTimes="0;1" dur="1s" begin="-0.125s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="scale" additive="sum" from="1 1" to="0.65 0.65" begin="-0.125" dur="1s" repeatCount="indefinite" />
+    </rect>
+  </g>
+</svg>

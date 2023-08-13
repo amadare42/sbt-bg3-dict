@@ -1,0 +1,67 @@
+.App {
+    width: 90%;
+    height: 100%;
+    margin: 25px auto;
+    min-width: 620px;
+    max-width: 1200px;
+    overflow: hidden;
+
+    @media (max-width: 620px) {
+        width: calc(100% - 10px);
+        min-width: 360px;
+        max-width: 768px;
+        margin: 10px auto;
+    }
+}
+
+.btn-base {
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+    padding: 0.1em;
+    margin: 3px;
+    border-radius: 3px;
+
+    &.enabled {
+        font-weight: bold;
+        background: #00b5e9;
+    }
+
+    &:hover {
+        cursor: pointer;
+        color: var(--color-focused-text);
+        background: #d2eeff;
+    }
+
+    &:active {
+        cursor: pointer;
+        background: #9fcde8;
+    }
+}
+
+.application-block {
+    background: var(--color-bg);
+    vertical-align: center;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .15);
+    border-radius: 3px;
+    height: 50px;
+}
+
+.switch-langs-button {
+    width: 40px;
+}
+
+.panel-top {
+    height: calc((100vh - 175px) / 2 - 10px - 1em);
+    margin-top: 10px;
+    padding: 1em 1em 2em 1em;
+}
+
+.panel-bottom {
+    height: calc((100vh - 175px) / 2 - 10px - 1.5em - 1em);
+    @media (max-width: 620px) {
+        height: calc((100vh - 175px) / 2 - 10px - 1.5em - 1em + 35px);
+    }
+
+    margin-top: 10px;
+}

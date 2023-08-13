@@ -1,0 +1,9 @@
+export {ReactComponent as ShareIcon} from '../resources/share.svg';
+export {ReactComponent as SearchIcon} from '../resources/search.svg';
+export {ReactComponent as SwitchIcon} from '../resources/switch.svg';
+export {ReactComponent as SpinnerIcon} from '../resources/spinner_dark.svg';
+export {ReactComponent as SpinnerDarkIcon} from '../resources/spinner_dark.svg';
+export {ReactComponent as TextIcon} from '../resources/text.svg';
+export {ReactComponent as XmlIcon} from '../resources/xml-icon.svg';
+export {ReactComponent as ThemeIcon} from '../resources/theme.svg';
+export {ReactComponent as CompareIcon} from '../resources/compare.svg';

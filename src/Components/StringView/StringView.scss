@@ -1,0 +1,62 @@
+
+
+.StringView {
+  padding: .5em;
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+
+  &.panel-top {
+    height: calc((100vh - 175px) / 2 - 10px - 1em);
+    margin-top: 10px;
+    padding: 1em 1em 2em 1em;
+  }
+}
+
+.StringView-text {
+  overflow-y: auto;
+  height: 100%;
+  white-space: pre-line;
+}
+
+.StringView .loading {
+  transition: opacity 0.2s ease-in;
+  opacity: 0.5;
+}
+.StringView p {
+  margin: 0.75em 0.5em 0.5em 0.5em;
+}
+.StringView small {
+  /*margin-top: 0.5em;*/
+}
+
+.StringView-selects {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.StringView-selects button {
+  width: 30px !important;
+}
+
+.StringView-selects .a {
+  flex: 2;
+}
+.StringView-selects .b {
+  flex: 4;
+}
+
+.custom-tag {
+  color: #00b5e9;
+  cursor: pointer;
+  text-decoration: none;
+}
+.custom-tag:hover {
+  color: #0088b5;
+  text-decoration: underline;
+}
+
+.custom-square-tag {
+  font-weight: bold;
+}
