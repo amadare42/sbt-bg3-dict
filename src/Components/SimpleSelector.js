@@ -34,7 +34,7 @@ export function SimpleSelector({values, targetValue, setTargetValue, cls, placeh
 export const commonSelectStyles = {
     control: (provided, state) => ({
         ...provided,
-        backgroundColor: 'var(--bg-color)',
+        backgroundColor: 'var(--color-bg)',
         color: 'var(--text-color)',
     }),
     singleValue: (provided, state) => ({

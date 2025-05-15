@@ -32,10 +32,24 @@ class WorkerLogic {
         return buffers;
     }
 
-    decompress = async (buffers) => {
+    decompress = async (arrayBuffers) => {
         this.reportProgress("Decompressing");
-        let binaryData = buffers.reduce(appendBuffer);
-        let unzipped = gzip.unzip(binaryData);
+        let binaryData = arrayBuffers.reduce(appendBuffer);
+
+        // Create a decompression stream
+        // eslint-disable-next-line no-undef
+        const ds = new DecompressionStream('gzip');
+
+        // Create readable stream from the compressed data
+        const readableStream = new Response(binaryData).body;
+
+        // Pipe through the decompression stream
+        const decompressedStream = readableStream.pipeThrough(ds);
+
+        // Get the decompressed data as an ArrayBuffer
+        const response = new Response(decompressedStream);
+        const unzipped = await response.arrayBuffer();
+
         return unzipped;
     }
 
